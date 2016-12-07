@@ -9,6 +9,8 @@ import getopt
 import socket
 import sys
 import argparse
+import errno
+from socket import error as socket_error
 
 class nmap(object):
 
@@ -42,6 +44,22 @@ class nmap(object):
             tcp = 1
 
         print args.hosts, args.address, network, subnet, udp, tcp, args.port
+        clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        clientsocket.setblocking(0)
+        clientsocket.settimeout(1)
+        try:
+            clientsocket.connect(('localhost', 25))
+            clientsocket.send('hello')
+            print 'socket open'
+            clientsocket.close()
+        except socket_error as serr:
+            # if serr.errno != errno.ECONNREFUSED:
+            print 'Socket refused'
+                # raise serr
+        except socket.timeout:
+            print 'timeout'
+
+
         sys.exit(2)
 
 try:
