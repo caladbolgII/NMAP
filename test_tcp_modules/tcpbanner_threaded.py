@@ -11,8 +11,6 @@ delay = 10
 ip_addr = "scanme.nmap.org"
 
 
-print_lock = threading.RLock()
-
 def grab(conn):
     try:
         #conn.send('OPEN \r\n')
@@ -44,7 +42,7 @@ def grab_80(conn):
         print '[-] Unable to grab any information: ' + str(e)
     
 
-def portscan_tcp(ip_addr, port, delay):
+def portscan_tcp(ip_addr, port, delay, print_lock):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(delay)
     open = False
@@ -56,18 +54,18 @@ def portscan_tcp(ip_addr, port, delay):
             conn = s.connect((smtp_addr,port))
         else:
             conn= s.connect((ip_addr,port))
-        with print_lock:
-            print "Port " +  str(port) + ": Open"
-            open = True
+        print_lock.acquire()
+        print "Port " +  str(port) + ": Open"
+        open = True
     except socket.timeout:
         print "Socket timeout on " + str(port)
     except (KeyboardInterrupt, SystemExit):
         s.close()
         sys.exit()
     except:
-       
         print "Port " +  str(port) + ": Closed"
-        pass
+      
+        
 
     # Banner Grabbing
     if (open):
@@ -78,15 +76,18 @@ def portscan_tcp(ip_addr, port, delay):
         else:
             grab(s)
         s.close()
+   
+    print_lock.release()
+        
         
 # The threader thread pulls an worker from the queue and processes it
-def threader():
+def threader(print_lock):
     while True:
         # gets an worker from the queue
         worker = q.get()
 
         # Run the example job with the avail worker in queue (thread)
-        portscan_tcp(ip_addr, worker, delay)
+        portscan_tcp(ip_addr, worker, delay, print_lock)
 
         # completed with the job
         q.task_done()
@@ -100,8 +101,10 @@ if __name__ == '__main__':
     #ip_addr = raw_input('Enter host to scan: ')
     
     # how many threads are we going to allow for
+    
+    print_lock = threading.Lock()
     for x in range(30):
-         t = threading.Thread(target=threader)
+         t = threading.Thread(target=threader, args=(print_lock,))
     
          # classifying as a daemon, so they will die when the main dies
          t.daemon = True
