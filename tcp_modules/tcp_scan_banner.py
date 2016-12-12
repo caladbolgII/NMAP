@@ -19,7 +19,7 @@ def grab(conn):
         print '[+]' + str(ret)
         return str(ret).encode('utf-8')
     except Exception, e:
-        print '[-] Unable to grab any information: ' + str(e)
+        logging.debug('[-] Unable to grab any information: {}'.format(e))
         return ""
 
 
@@ -30,8 +30,13 @@ def grab_80(conn):
         if (str(ret) == "Protocol mismatch."):
             conn.send('HEAD / HTTP/1.1\r\n\r\n')
             ret = conn.recv(1024)
-        print '[+]' + str(ret)
-        return str(ret).encode('utf-8')
+        logging.debug('[+] {}'.format(str(ret)))
+        split_ret = ret.split("\r\n")
+        version = split_ret[2]
+        version = version.split(" ")
+        version = version[1] + " " + version[2]
+        logging.debug(split_ret)
+        return str(version).encode('utf-8')
        
     except Exception, e:
         print '[-] Unable to grab any information: ' + str(e)
@@ -79,7 +84,7 @@ def tcp_scan_banner(ip_addr, port, delay):
                 s.settimeout(delay)
                 con = s.connect((ip_num,port_num))
 
-                if (port == 80):
+                if (port_num == 80):
                     version = grab_80(s)
                 else:
                     version = grab(s)
@@ -97,7 +102,6 @@ def tcp_scan_banner(ip_addr, port, delay):
                         portserv = "unknown"
 
                 results_list[first_index].append([port_str, "open", portserv, version])
-                #results_list[first_index].append([port_str, "open", dict_tcp[str(port_num)]])
             except socket.timeout:
                 s.close()
                 logging.debug("Socket timeout on {}".format(str(port_num)))
@@ -109,11 +113,9 @@ def tcp_scan_banner(ip_addr, port, delay):
                     else:
                         portserv = "unknown"
                 results_list[first_index].append([port_str, "filtered", portserv, version])
-                #results_list[first_index].append([port_str, "filtered", dict_tcp[str(port_num)]])
             except socket.error, exc:
                 logging.debug("Socket error on {}: {}".format(str(port_num), exc))
                 s.close()
-                #logging.debug("Socket error on {}".format(str(port_num)))
                 closed_ports = closed_ports + 1
             except (KeyboardInterrupt, SystemExit):
                 print ("The program was exited.")
@@ -140,7 +142,7 @@ def tcp_scan_banner(ip_addr, port, delay):
 if __name__ == '__main__':
     #ip_addr = "scanme.nmap.org"
     #ip_addr = raw_input('Enter host to scan: ')
-    delay = 2
+    delay = 1
     #port = 22
     ip_addr=["scanme.nmap.org"]
     #port = range(1, 30)
