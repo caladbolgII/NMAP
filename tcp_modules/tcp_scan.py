@@ -51,6 +51,7 @@ def tcp_scan(ip_addr, port, delay):
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 s.settimeout(delay)
                 con = s.connect((ip_num,port_num))
+              
                 logging.debug("Port {}: Open".format(str(port_num)))
                 s.close()
 
