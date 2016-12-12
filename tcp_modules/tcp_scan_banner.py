@@ -37,7 +37,7 @@ def grab_80(conn):
         version = version[1] + " " + version[2]
         logging.debug(split_ret)
         return str(version).encode('utf-8')
-       
+
     except Exception, e:
         print '[-] Unable to grab any information: ' + str(e)
         return ""
