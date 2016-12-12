@@ -37,6 +37,10 @@ http://www.pythonforbeginners.com/code-snippets-source-code/port-scanner-in-pyth
 http://code.activestate.com/recipes/576690-pyscanlogger-python-port-scan-detector/
 http://code.activestate.com/recipes/576690-pyscanlogger-python-port-scan-detector/
 
+Ports List CSV
+http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+
+
 #### Functions
 tcp_scan(ip_addr, port, delay)
 inputs: 
@@ -60,4 +64,5 @@ delay - number
 - scan for open/filtered/closed ports with udp packets
 
 os_detect()
+
 
