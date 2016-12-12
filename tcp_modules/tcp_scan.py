@@ -75,7 +75,7 @@ def tcp_scan(ip_addr, port, delay):
                         portserv = dict_tcp[str(port_num)]
                     else:
                         portserv = "unknown"
-                results_list[first_index].append([port_str, "filtered", socket.getservbyport(port_num, "tcp")])
+                results_list[first_index].append([port_str, "filtered", portserv])
                 #results_list[first_index].append([port_str, "filtered", dict_tcp[str(port_num)]])
             except socket.error, exc:
                 logging.debug("Socket error on {}: {}".format(str(port_num), exc))
