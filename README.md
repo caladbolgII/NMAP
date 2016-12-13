@@ -42,19 +42,29 @@ http://www.iana.org/assignments/service-names-port-numbers/service-names-port-nu
 
 
 #### Functions
-tcp_scan(ip_addr, port, delay)
-inputs: 
+tcp_scan(ip_addr, port, delay) 
+- scan for open/filtered/closed ports using a dictionary for common ports
+Inputs: 
 ip_addr - array
 port - array
 delay - number
-- scan for open/filtered/closed ports using a dictionary for common ports
+Tested with:
+scanme.nmap.org
+Comments:
+Done! Need threading. Also better dictionary for service names.
+Further testing needed.
 
 tcp_scan_banner(ip_addr, port, delay)
-inputs: 
+- same as tcp_scan, but try to find banner from port then use dictionary if cannot
+Inputs
 ip_addr - array
 port - array
 delay - number
-- same as tcp_scan, but try to find banner from port then use dictionary if cannot
+Tested with:
+scanme.nmap.org
+Comments:
+Done! Need threading. Also better dictionary for service names.
+Further testing needed.
 
 udp_scan(ip_addr, port, delay)
 inputs: 
