@@ -134,7 +134,7 @@ if __name__ == '__main__':
 		print "assemble",ip_mask+'.'+startip
 		for index in range(1,ipspan):
 			ip_addr.insert(index,ip_mask+'.'+str(int(startip)+index))
-			print "assemble",index,ip_mask+'.'+str(int(startip)+index)
+			print "assemble",index,ip_mask+str(int(startip)+index)
 		print port
 	except ValueError:
 		ip_addr.insert(0,str(args.hosts))
