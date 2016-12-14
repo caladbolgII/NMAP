@@ -12,43 +12,12 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
 					format='%(asctime)s (%(threadName)-2s) %(message)s')
 
-def grab(conn):
-    try:
-        #conn.send('OPEN \r\n')
-        ret = conn.recv(1024)
-        print '[+]' + str(ret)
-        return str(ret).encode('utf-8')
-    except Exception, e:
-        logging.debug('[-] Unable to grab any information: {}'.format(e))
-        return ""
-
-
-def grab_80(conn):
-    try:
-        conn.send('HEAD / HTTP/1.0\r\n\r\n')
-        ret = conn.recv(1024)
-        if (str(ret) == "Protocol mismatch."):
-            conn.send('HEAD / HTTP/1.1\r\n\r\n')
-            ret = conn.recv(1024)
-        logging.debug('[+] {}'.format(str(ret)))
-        split_ret = ret.split("\r\n")
-        version = split_ret[2]
-        version = version.split(" ")
-        version = version[1] + " " + version[2]
-        logging.debug(split_ret)
-        return str(version).encode('utf-8')
-
-    except Exception, e:
-        print '[-] Unable to grab any information: ' + str(e)
-        return ""
-
-def tcp_scan_banner(ip_addr, port, delay):
+def tcp_scan(ip_addr, port, delay):
     """
         Spec: default is the 1000 ports that is being used by NMAP
 
         Def:
         scan for open/filtered/closed ports using a dictionary for common ports
-        Can get banner for open ports
 
         inputs: 
         ip_addr - array
@@ -78,18 +47,11 @@ def tcp_scan_banner(ip_addr, port, delay):
         for port_num in port:
             port_str = "{}/tcp".format(port_num)
             portserv = ""
-            version = ""
             try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 s.settimeout(delay)
                 con = s.connect((ip_num,port_num))
-
-                if (port_num == 80):
-                    version = grab_80(s)
-                else:
-                    version = grab(s)
-
-
+              
                 logging.debug("Port {}: Open".format(str(port_num)))
                 s.close()
 
@@ -101,7 +63,8 @@ def tcp_scan_banner(ip_addr, port, delay):
                     else:
                         portserv = "unknown"
 
-                results_list[first_index].append([port_str, "open", portserv, version])
+                results_list[first_index].append([port_str, "open", portserv])
+                #results_list[first_index].append([port_str, "open", dict_tcp[str(port_num)]])
             except socket.timeout:
                 s.close()
                 logging.debug("Socket timeout on {}".format(str(port_num)))
@@ -112,10 +75,12 @@ def tcp_scan_banner(ip_addr, port, delay):
                         portserv = dict_tcp[str(port_num)]
                     else:
                         portserv = "unknown"
-                results_list[first_index].append([port_str, "filtered", portserv, version])
+                results_list[first_index].append([port_str, "filtered", portserv])
+                #results_list[first_index].append([port_str, "filtered", dict_tcp[str(port_num)]])
             except socket.error, exc:
                 logging.debug("Socket error on {}: {}".format(str(port_num), exc))
                 s.close()
+                #logging.debug("Socket error on {}".format(str(port_num)))
                 closed_ports = closed_ports + 1
             except (KeyboardInterrupt, SystemExit):
                 print ("The program was exited.")
@@ -136,32 +101,19 @@ def tcp_scan_banner(ip_addr, port, delay):
     for ip_num in ip_addr:
         print ("Scan report for: {} ({})".format(socket.getfqdn(ip_num), socket.gethostbyname(ip_num)))
         print ("Not shown: {} closed ports".format(closed_ports))
-        print tabulate(results_list[second_index], headers=["PORT", "STATE", "SERVICE", "VERSION"])
-        results_string = str(results_list[second_index]).upper()
-        #print results_string
-        
-        # Check for Linux
-        if ("UBUNTU" in results_string) or ("CENTOS" in results_string) or ("REDHAT" in results_list) or ("BSD" in results_list) or ("LINUX" in results_list):
-            print "OS guess: Linux"
-        # Check for Windows
-        elif ("MICROSOFT" in results_string) or ("MS" in results_string):
-            print "OS guess: Windows"
-        else:
-            print "OS guess: cannot guess (maybe Mac OS)"
+        print tabulate(results_list[second_index], headers=["PORT", "STATE", "SERVICE"])
         second_index = second_index + 1
 
 if __name__ == '__main__':
     #ip_addr = "scanme.nmap.org"
     #ip_addr = raw_input('Enter host to scan: ')
-    delay = 1
+    delay = 5
     #port = 22
-    ip_addr = ["scanme.nmap.org"]
-    #ip_addr=["scanme.nmap.org"]
+    ip_addr=["scanme.nmap.org"]
     #port = range(1, 30)
     
     # All of these ports except 1 should be recognized from c9.io
-    port = [1,22, 25, 80, 264, 465, 587, 1720, 3333, 9929, 31337]
-    #port = [135, 139, 445, 902, 912]
+    port = [1,22, 25, 80, 465, 587, 3333, 9929, 31337]
     #port = [22]
     #for i in range(20, 25):
-    tcp_scan_banner(ip_addr, port, delay)
+    tcp_scan(ip_addr, port, delay)
