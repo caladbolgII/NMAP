@@ -5670,4 +5670,504 @@ sgi-dmfmgr,11109,tcp,Data migration facility Manager (DMF) is a browser based in
 sgi-soap,11110,tcp,Data migration facility (DMF) SOAP is a web server protocol to support remote access to DMF
 vce,11111,tcp,Viral Computing Environment (VCE)
 dicom,11112,tcp,DICOM
-suncacao-snmp,11161,tcp,sun caca
+suncacao-snmp,11161,tcp,sun cacao snmp access point
+suncacao-jmxmp,11162,tcp,sun cacao JMX-remoting access point
+suncacao-rmi,11163,tcp,sun cacao rmi registry access point
+suncacao-csa,11164,tcp,sun cacao command-streaming access point
+suncacao-websvc,11165,tcp,sun cacao web service access point
+,11171,tcp,Reserved
+oemcacao-jmxmp,11172,tcp,OEM cacao JMX-remoting access point
+t5-straton,11173,tcp,Straton Runtime Programing
+oemcacao-rmi,11174,tcp,OEM cacao rmi registry access point
+oemcacao-websvc,11175,tcp,OEM cacao web service access point
+smsqp,11201,tcp,smsqp
+dcsl-backup,11202,tcp,DCSL Network Backup Services
+wifree,11208,tcp,WiFree Service
+memcache,11211,tcp,Memory cache service
+imip,11319,tcp,IMIP
+imip-channels,11320,tcp,IMIP Channels Port
+arena-server,11321,tcp,Arena Server Listen
+atm-uhas,11367,tcp,ATM UHAS
+hkp,11371,tcp,OpenPGP HTTP Keyserver
+,11430,tcp,Reserved
+asgcypresstcps,11489,tcp,ASG Cypress Secure Only
+tempest-port,11600,tcp,Tempest Protocol Port
+emc-xsw-dconfig,11623,tcp,EMC XtremSW distributed config
+h323callsigalt,11720,tcp,H.323 Call Control Signalling Alternate
+emc-xsw-dcache,11723,tcp,EMC XtremSW distributed cache
+intrepid-ssl,11751,tcp,Intrepid SSL
+lanschool,11796,tcp,LanSchool
+xoraya,11876,tcp,X2E Xoraya Multichannel protocol
+,11877,tcp,Reserved
+sysinfo-sp,11967,tcp,SysInfo Service Protocol
+entextxid,12000,tcp,IBM Enterprise Extender SNA XID Exchange
+entextnetwk,12001,tcp,IBM Enterprise Extender SNA COS Network Priority
+entexthigh,12002,tcp,IBM Enterprise Extender SNA COS High Priority
+entextmed,12003,tcp,IBM Enterprise Extender SNA COS Medium Priority
+entextlow,12004,tcp,IBM Enterprise Extender SNA COS Low Priority
+dbisamserver1,12005,tcp,DBISAM Database Server - Regular
+dbisamserver2,12006,tcp,DBISAM Database Server - Admin
+accuracer,12007,tcp,Accuracer Database System Server
+accuracer-dbms,12008,tcp,Accuracer Database System Admin
+,12009,tcp,Reserved
+edbsrvr,12010,tcp,ElevateDB Server
+vipera,12012,tcp,Vipera Messaging Service
+vipera-ssl,12013,tcp,Vipera Messaging Service over SSL Communication
+rets-ssl,12109,tcp,RETS over SSL
+nupaper-ss,12121,tcp,NuPaper Session Service
+cawas,12168,tcp,CA Web Access Service
+hivep,12172,tcp,HiveP
+linogridengine,12300,tcp,LinoGrid Engine
+rads,12302,tcp,"Remote Administration Daemon (RAD) is a system service that offers secure, remote, programmatic access to Solaris system configuration and run-time state"
+warehouse-sss,12321,tcp,Warehouse Monitoring Syst SSS
+warehouse,12322,tcp,Warehouse Monitoring Syst
+italk,12345,tcp,Italk Chat System
+tsaf,12753,tcp,tsaf port
+netperf,12865,tcp,control port for the netperf benchmark
+i-zipqd,13160,tcp,I-ZIPQD
+bcslogc,13216,tcp,Black Crow Software application logging
+rs-pias,13217,tcp,R&S Proxy Installation Assistant Service
+emc-vcas-tcp,13218,tcp,EMC Virtual CAS Service
+powwow-client,13223,tcp,PowWow Client
+powwow-server,13224,tcp,PowWow Server
+doip-data,13400,tcp,DoIP Data
+bprd,13720,tcp,BPRD Protocol (VERITAS NetBackup)
+bpdbm,13721,tcp,BPDBM Protocol (VERITAS NetBackup)
+bpjava-msvc,13722,tcp,BP Java MSVC Protocol
+vnetd,13724,tcp,Veritas Network Utility
+bpcd,13782,tcp,VERITAS NetBackup
+vopied,13783,tcp,VOPIED Protocol
+nbdb,13785,tcp,NetBackup Database
+nomdb,13786,tcp,Veritas-nomdb
+dsmcc-config,13818,tcp,DSMCC Config
+dsmcc-session,13819,tcp,DSMCC Session Messages
+dsmcc-passthru,13820,tcp,DSMCC Pass-Thru Messages
+dsmcc-download,13821,tcp,DSMCC Download Protocol
+dsmcc-ccp,13822,tcp,DSMCC Channel Change Protocol
+bmdss,13823,tcp,Blackmagic Design Streaming Server
+ucontrol,13894,tcp,Ultimate Control communication protocol
+dta-systems,13929,tcp,D-TA SYSTEMS
+medevolve,13930,tcp,MedEvolve Port Requester
+scotty-ft,14000,tcp,SCOTTY High-Speed Filetransfer
+sua,14001,tcp,SUA
+,14002,tcp,Reserved
+sage-best-com1,14033,tcp,sage Best! Config Server 1
+sage-best-com2,14034,tcp,sage Best! Config Server 2
+vcs-app,14141,tcp,VCS Application
+icpp,14142,tcp,IceWall Cert Protocol
+icpps,14143,tcp,IceWall Cert Protocol over TLS
+gcm-app,14145,tcp,GCM Application
+vrts-tdd,14149,tcp,Veritas Traffic Director
+vcscmd,14150,tcp,Veritas Cluster Server Command Server
+vad,14154,tcp,Veritas Application Director
+cps,14250,tcp,Fencing Server
+ca-web-update,14414,tcp,CA eTrust Web Update Service
+xpra,14500,tcp,xpra network protocol
+hde-lcesrvr-1,14936,tcp,hde-lcesrvr-1
+hde-lcesrvr-2,14937,tcp,hde-lcesrvr-2
+hydap,15000,tcp,Hypack Data Aquisition
+onep-tls,15002,tcp,Open Network Environment TLS
+,15118,tcp,Reserved
+xpilot,15345,tcp,XPilot Contact Port
+3link,15363,tcp,3Link Negotiation
+cisco-snat,15555,tcp,Cisco Stateful NAT
+bex-xr,15660,tcp,Backup Express Restore Server
+ptp,15740,tcp,Picture Transfer Protocol
+,15998,tcp,Reserved
+programmar,15999,tcp,ProGrammar Enterprise
+fmsas,16000,tcp,Administration Server Access
+fmsascon,16001,tcp,Administration Server Connector
+gsms,16002,tcp,GoodSync Mediation Service
+,16003,tcp,Reserved
+jwpc,16020,tcp,Filemaker Java Web Publishing Core
+jwpc-bin,16021,tcp,Filemaker Java Web Publishing Core Binary
+sun-sea-port,16161,tcp,Solaris SEA Port
+solaris-audit,16162,tcp,Solaris Audit - secure remote audit log
+etb4j,16309,tcp,etb4j
+pduncs,16310,tcp,"Policy Distribute, Update Notification"
+pdefmns,16311,tcp,Policy definition and update management
+netserialext1,16360,tcp,Network Serial Extension Ports One
+netserialext2,16361,tcp,Network Serial Extension Ports Two
+netserialext3,16367,tcp,Network Serial Extension Ports Three
+netserialext4,16368,tcp,Network Serial Extension Ports Four
+connected,16384,tcp,Connected Corp
+rdgs,16385,tcp,Reliable Datagram Sockets
+xoms,16619,tcp,X509 Objects Management Service
+axon-tunnel,16665,tcp,Reliable multipath data transport for high latencies
+,16666,tcp,Reserved
+cadsisvr,16789,tcp,This server provides callable services to mainframe External Security Managers from any TCP/IP platform
+newbay-snc-mc,16900,tcp,Newbay Mobile Client Update Service
+sgcip,16950,tcp,Simple Generic Client Interface Protocol
+intel-rci-mp,16991,tcp,INTEL-RCI-MP
+amt-soap-http,16992,tcp,Intel(R) AMT SOAP/HTTP
+amt-soap-https,16993,tcp,Intel(R) AMT SOAP/HTTPS
+amt-redir-tcp,16994,tcp,Intel(R) AMT Redirection/TCP
+amt-redir-tls,16995,tcp,Intel(R) AMT Redirection/TLS
+isode-dua,17007,tcp,
+vestasdlp,17184,tcp,Vestas Data Layer Protocol
+soundsvirtual,17185,tcp,Sounds Virtual
+chipper,17219,tcp,Chipper
+avtp,17220,tcp,IEEE 1722 Transport Protocol for Time Sensitive Applications
+avdecc,17221,tcp,"IEEE 1722.1 AVB Discovery, Enumeration, Connection management, and Control"
+,17222,tcp,Reserved
+isa100-gci,17223,tcp,ISA100 GCI is a service utilizing a common interface between an ISA100 Wireless gateway and a client application
+,17224,tcp,Reserved
+trdp-md,17225,tcp,Train Realtime Data Protocol (TRDP) Message Data
+integrius-stp,17234,tcp,Integrius Secure Tunnel Protocol
+ssh-mgmt,17235,tcp,SSH Tectia Manager
+db-lsp,17500,tcp,Dropbox LanSync Protocol
+ailith,17555,tcp,Ailith management of routers
+ea,17729,tcp,Eclipse Aviation
+zep,17754,tcp,Encap. ZigBee Packets
+zigbee-ip,17755,tcp,ZigBee IP Transport Service
+zigbee-ips,17756,tcp,ZigBee IP Transport Secure Service
+sw-orion,17777,tcp,SolarWinds Orion
+biimenu,18000,tcp,"Beckman Instruments, Inc."
+radpdf,18104,tcp,RAD PDF Service
+racf,18136,tcp,z/OS Resource Access Control Facility
+opsec-cvp,18181,tcp,OPSEC CVP
+opsec-ufp,18182,tcp,OPSEC UFP
+opsec-sam,18183,tcp,OPSEC SAM
+opsec-lea,18184,tcp,OPSEC LEA
+opsec-omi,18185,tcp,OPSEC OMI
+ohsc,18186,tcp,Occupational Health SC
+opsec-ela,18187,tcp,OPSEC ELA
+checkpoint-rtm,18241,tcp,Check Point RTM
+iclid,18242,tcp,Checkpoint router monitoring
+clusterxl,18243,tcp,Checkpoint router state backup
+gv-pf,18262,tcp,GV NetConfig Service
+ac-cluster,18463,tcp,AC Cluster
+rds-ib,18634,tcp,Reliable Datagram Service
+rds-ip,18635,tcp,Reliable Datagram Service over IP
+vdmmesh,18668,tcp,Manufacturing Execution Systems Mesh Communication
+ique,18769,tcp,IQue Protocol
+infotos,18881,tcp,Infotos
+apc-necmp,18888,tcp,APCNECMP
+igrid,19000,tcp,iGrid Server
+scintilla,19007,tcp,Scintilla protocol for device services
+j-link,19020,tcp,J-Link TCP/IP Protocol
+opsec-uaa,19191,tcp,OPSEC UAA
+ua-secureagent,19194,tcp,UserAuthority SecureAgent
+cora,19220,tcp,Client Connection Management and Data Exchange Service
+keysrvr,19283,tcp,Key Server for SASSAFRAS
+keyshadow,19315,tcp,Key Shadow for SASSAFRAS
+mtrgtrans,19398,tcp,mtrgtrans
+hp-sco,19410,tcp,hp-sco
+hp-sca,19411,tcp,hp-sca
+hp-sessmon,19412,tcp,HP-SESSMON
+fxuptp,19539,tcp,FXUPTP
+sxuptp,19540,tcp,SXUPTP
+jcp,19541,tcp,JCP Client
+,19788,tcp,Reserved
+iec-104-sec,19998,tcp,IEC 60870-5-104 process control - secure
+dnp-sec,19999,tcp,Distributed Network Protocol - Secure
+dnp,20000,tcp,DNP
+microsan,20001,tcp,MicroSAN
+commtact-http,20002,tcp,Commtact HTTP
+commtact-https,20003,tcp,Commtact HTTPS
+openwebnet,20005,tcp,OpenWebNet protocol for electric network
+,20012,tcp,Reserved
+ss-idi,20013,tcp,Samsung Interdevice Interaction
+opendeploy,20014,tcp,OpenDeploy Listener
+nburn-id,20034,tcp,"NetBurner ID Port
+IANA assigned this well-formed service name as a replacement for ""nburn_id""."
+nburn_id,20034,tcp,NetBurner ID Port
+tmophl7mts,20046,tcp,TMOP HL7 Message Transfer Service
+mountd,20048,tcp,NFS mount protocol
+nfsrdma,20049,tcp,Network File System (NFS) over RDMA
+avesterra,20057,tcp,AvesTerra Hypergraph Transfer Protocol (HGTP)
+tolfab,20167,tcp,TOLfab Data Change
+ipdtp-port,20202,tcp,IPD Tunneling Port
+ipulse-ics,20222,tcp,iPulse-ICS
+emwavemsg,20480,tcp,emWave Message Service
+track,20670,tcp,Track
+athand-mmp,20999,tcp,At Hand MMP
+irtrans,21000,tcp,IRTrans Control
+notezilla-lan,21010,tcp,Notezilla.Lan Server
+rdm-tfs,21553,tcp,Raima RDM TFS
+dfserver,21554,tcp,MineScape Design File Server
+vofr-gateway,21590,tcp,VoFR Gateway
+tvpm,21800,tcp,TVNC Pro Multiplexing
+webphone,21845,tcp,webphone
+netspeak-is,21846,tcp,NetSpeak Corp. Directory Services
+netspeak-cs,21847,tcp,NetSpeak Corp. Connection Services
+netspeak-acd,21848,tcp,NetSpeak Corp. Automatic Call Distribution
+netspeak-cps,21849,tcp,NetSpeak Corp. Credit Processing System
+snapenetio,22000,tcp,SNAPenetIO
+optocontrol,22001,tcp,OptoControl
+optohost002,22002,tcp,Opto Host Port 2
+optohost003,22003,tcp,Opto Host Port 3
+optohost004,22004,tcp,Opto Host Port 4
+optohost004,22005,tcp,Opto Host Port 5
+dcap,22125,tcp,dCache Access Protocol
+gsidcap,22128,tcp,GSI dCache Access Protocol
+easyengine,22222,tcp,EasyEngine is CLI tool to manage WordPress Sites on Nginx server
+wnn6,22273,tcp,wnn6
+cis,22305,tcp,CompactIS Tunnel
+shrewd-control,22335,tcp,Initium Labs Security and Automation Control
+cis-secure,22343,tcp,CompactIS Secure Tunnel
+wibukey,22347,tcp,WibuKey Standard WkLan
+codemeter,22350,tcp,CodeMeter Standard
+codemeter-cmwan,22351,tcp,TPC/IP requests of copy protection software to a server
+caldsoft-backup,22537,tcp,CaldSoft Backup server file transfer
+vocaltec-wconf,22555,tcp,Vocaltec Web Conference
+talikaserver,22763,tcp,Talika Main Server
+aws-brf,22800,tcp,Telerate Information Platform LAN
+brf-gw,22951,tcp,Telerate Information Platform WAN
+inovaport1,23000,tcp,Inova LightLink Server Type 1
+inovaport2,23001,tcp,Inova LightLink Server Type 2
+inovaport3,23002,tcp,Inova LightLink Server Type 3
+inovaport4,23003,tcp,Inova LightLink Server Type 4
+inovaport5,23004,tcp,Inova LightLink Server Type 5
+inovaport6,23005,tcp,Inova LightLink Server Type 6
+gntp,23053,tcp,Generic Notification Transport Protocol
+,23272,tcp,Reserved
+5afe-dir,23294,tcp,5AFE SDN Directory
+elxmgmt,23333,tcp,Emulex HBAnyware Remote Management
+novar-dbase,23400,tcp,Novar Data
+novar-alarm,23401,tcp,Novar Alarm
+novar-global,23402,tcp,Novar Global
+aequus,23456,tcp,Aequus Service
+aequus-alt,23457,tcp,Aequus Service Mgmt
+areaguard-neo,23546,tcp,AreaGuard Neo - WebServer
+med-ltp,24000,tcp,med-ltp
+med-fsp-rx,24001,tcp,med-fsp-rx
+med-fsp-tx,24002,tcp,med-fsp-tx
+med-supp,24003,tcp,med-supp
+med-ovw,24004,tcp,med-ovw
+med-ci,24005,tcp,med-ci
+med-net-svc,24006,tcp,med-net-svc
+filesphere,24242,tcp,fileSphere
+vista-4gl,24249,tcp,Vista 4GL
+ild,24321,tcp,Isolv Local Directory
+,24322,tcp,Reserved
+intel-rci,24386,tcp,"Intel RCI
+IANA assigned this well-formed service name as a replacement for ""intel_rci""."
+intel_rci,24386,tcp,Intel RCI
+tonidods,24465,tcp,Tonido Domain Server
+binkp,24554,tcp,BINKP
+bilobit,24577,tcp,bilobit Service
+sdtvwcam,24666,tcp,Service used by SmarDTV to communicate between a CAM and a second screen application
+canditv,24676,tcp,Canditv Message Service
+flashfiler,24677,tcp,FlashFiler
+proactivate,24678,tcp,Turbopower Proactivate
+tcc-http,24680,tcp,TCC User HTTP Service
+cslg,24754,tcp,Citrix StorageLink Gateway
+,24850,tcp,Reserved
+find,24922,tcp,Find Identification of Network Devices
+icl-twobase1,25000,tcp,icl-twobase1
+icl-twobase2,25001,tcp,icl-twobase2
+icl-twobase3,25002,tcp,icl-twobase3
+icl-twobase4,25003,tcp,icl-twobase4
+icl-twobase5,25004,tcp,icl-twobase5
+icl-twobase6,25005,tcp,icl-twobase6
+icl-twobase7,25006,tcp,icl-twobase7
+icl-twobase8,25007,tcp,icl-twobase8
+icl-twobase9,25008,tcp,icl-twobase9
+icl-twobase10,25009,tcp,icl-twobase10
+sauterdongle,25576,tcp,Sauter Dongle
+idtp,25604,tcp,Identifier Tracing Protocol
+vocaltec-hos,25793,tcp,Vocaltec Address Server
+tasp-net,25900,tcp,TASP Network Comm
+niobserver,25901,tcp,NIObserver
+nilinkanalyst,25902,tcp,NILinkAnalyst
+niprobe,25903,tcp,NIProbe
+,25954,tcp,Reserved
+,25955,tcp,Reserved
+quake,26000,tcp,quake
+scscp,26133,tcp,Symbolic Computation Software Composability Protocol
+wnn6-ds,26208,tcp,wnn6-ds
+cockroach,26257,tcp,CockroachDB
+ezproxy,26260,tcp,eZproxy
+ezmeeting,26261,tcp,eZmeeting
+k3software-svr,26262,tcp,K3 Software-Server
+k3software-cli,26263,tcp,K3 Software-Client
+exoline-tcp,26486,tcp,EXOline-TCP
+exoconfig,26487,tcp,EXOconfig
+exonet,26489,tcp,EXOnet
+imagepump,27345,tcp,ImagePump
+jesmsjc,27442,tcp,Job controller service
+kopek-httphead,27504,tcp,Kopek HTTP Head Port
+ars-vista,27782,tcp,ARS VISTA Application
+astrolink,27876,tcp,Astrolink Protocol
+tw-auth-key,27999,tcp,TW Authentication/Key Distribution and
+nxlmd,28000,tcp,NX License Manager
+pqsp,28001,tcp,PQ Service
+,28119,tcp,Reserved
+voxelstorm,28200,tcp,VoxelStorm game server
+siemensgsm,28240,tcp,Siemens GSM
+bosswave,28589,tcp,Building operating system services wide area verified exchange
+,29118,tcp,Reserved
+otmp,29167,tcp,ObTools Message Protocol
+,29168,tcp,Reserved
+bingbang,29999,tcp,data exchange protocol for IEC61850 in wind power plants
+ndmps,30000,tcp,Secure Network Data Management Protocol
+pago-services1,30001,tcp,Pago Services 1
+pago-services2,30002,tcp,Pago Services 2
+amicon-fpsu-ra,30003,tcp,Amicon FPSU-IP Remote Administration
+,30004,tcp,Reserved
+rwp,30100,tcp,Remote Window Protocol
+kingdomsonline,30260,tcp,Kingdoms Online (CraigAvenue)
+,30832,tcp,Reserved
+ovobs,30999,tcp,OpenView Service Desk Client
+autotrac-acp,31020,tcp,Autotrac ACP 245
+,31029,tcp,Reserved
+pace-licensed,31400,tcp,PACE license server
+xqosd,31416,tcp,XQoS network monitor
+tetrinet,31457,tcp,TetriNET Protocol
+lm-mon,31620,tcp,lm mon
+dsx-monitor,31685,tcp,"DS Expert Monitor
+IANA assigned this well-formed service name as a replacement for ""dsx_monitor""."
+dsx_monitor,31685,tcp,DS Expert Monitor
+gamesmith-port,31765,tcp,GameSmith Port
+iceedcp-tx,31948,tcp,"Embedded Device Configuration Protocol TX
+IANA assigned this well-formed service name as a replacement for ""iceedcp_tx""."
+iceedcp_tx,31948,tcp,Embedded Device Configuration Protocol TX
+iceedcp-rx,31949,tcp,"Embedded Device Configuration Protocol RX
+IANA assigned this well-formed service name as a replacement for ""iceedcp_rx""."
+iceedcp_rx,31949,tcp,Embedded Device Configuration Protocol RX
+iracinghelper,32034,tcp,iRacing helper service
+t1distproc60,32249,tcp,T1 Distributed Processor
+plex,32400,tcp,Plex multimedia
+apm-link,32483,tcp,Access Point Manager Link
+sec-ntb-clnt,32635,tcp,SecureNotebook-CLNT
+DMExpress,32636,tcp,DMExpress
+filenet-powsrm,32767,tcp,FileNet BPM WS-ReliableMessaging Client
+filenet-tms,32768,tcp,Filenet TMS
+filenet-rpc,32769,tcp,Filenet RPC
+filenet-nch,32770,tcp,Filenet NCH
+filenet-rmi,32771,tcp,FileNET RMI
+filenet-pa,32772,tcp,FileNET Process Analyzer
+filenet-cm,32773,tcp,FileNET Component Manager
+filenet-re,32774,tcp,FileNET Rules Engine
+filenet-pch,32775,tcp,Performance Clearinghouse
+filenet-peior,32776,tcp,FileNET BPM IOR
+filenet-obrok,32777,tcp,FileNet BPM CORBA
+mlsn,32801,tcp,Multiple Listing Service Network
+retp,32811,tcp,Real Estate Transport Protocol
+idmgratm,32896,tcp,Attachmate ID Manager
+mysqlx,33060,tcp,MySQL Database Extended Interface
+aurora-balaena,33123,tcp,Aurora (Balaena Ltd)
+diamondport,33331,tcp,DiamondCentral Interface
+dgi-serv,33333,tcp,Digital Gaslight Service
+speedtrace,33334,tcp,SpeedTrace TraceAgent
+traceroute,33434,tcp,traceroute use
+snip-slave,33656,tcp,SNIP Slave
+turbonote-2,34249,tcp,TurboNote Relay Server Default Port
+p-net-local,34378,tcp,P-Net on IP local
+p-net-remote,34379,tcp,P-Net on IP remote
+dhanalakshmi,34567,tcp,dhanalakshmi.org EDI Service
+profinet-rt,34962,tcp,PROFInet RT Unicast
+profinet-rtm,34963,tcp,PROFInet RT Multicast
+profinet-cm,34964,tcp,PROFInet Context Manager
+ethercat,34980,tcp,EtherCAT Port
+heathview,35000,tcp,HeathView
+rt-viewer,35001,tcp,ReadyTech Viewer
+rt-sound,35002,tcp,ReadyTech Sound Server
+rt-devicemapper,35003,tcp,ReadyTech DeviceMapper Server
+rt-classmanager,35004,tcp,ReadyTech ClassManager
+rt-labtracker,35005,tcp,ReadyTech LabTracker
+rt-helper,35006,tcp,ReadyTech Helper Service
+axio-disc,35100,tcp,Axiomatic discovery protocol
+kitim,35354,tcp,KIT Messenger
+altova-lm,35355,tcp,Altova License Management
+guttersnex,35356,tcp,Gutters Note Exchange
+openstack-id,35357,tcp,OpenStack ID Service
+allpeers,36001,tcp,AllPeers Network
+,36411,tcp,Reserved
+,36412,tcp,Reserved
+,36422,tcp,Reserved
+,36462,tcp,Reserved
+febooti-aw,36524,tcp,Febooti Automation Workshop
+observium-agent,36602,tcp,Observium statistics collection agent
+mapx,36700,tcp,MapX communication
+kastenxpipe,36865,tcp,KastenX Pipe
+neckar,37475,tcp,science + computing's Venus Administration Port
+gdrive-sync,37483,tcp,Google Drive Sync
+eftp,37601,tcp,Epipole File Transfer Protocol
+unisys-eportal,37654,tcp,Unisys ClearPath ePortal
+ivs-database,38000,tcp,InfoVista Server Database
+ivs-insertion,38001,tcp,InfoVista Server Insertion
+cresco-control,38002,tcp,Cresco Controller
+galaxy7-data,38201,tcp,Galaxy7 Data Tunnel
+fairview,38202,tcp,Fairview Message Service
+agpolicy,38203,tcp,AppGate Policy Server
+sruth,38800,tcp,"Sruth is a service for the distribution of routinely-
+      generated but arbitrary files based on a publish/subscribe
+      distribution model and implemented using a peer-to-peer transport
+      mechanism"
+secrmmsafecopya,38865,tcp,Security approval process for use of the secRMM SafeCopy program
+turbonote-1,39681,tcp,TurboNote Default Port
+safetynetp,40000,tcp,SafetyNET p
+,40023,tcp,Reserved
+sptx,40404,tcp,Simplify Printing TX
+cscp,40841,tcp,CSCP
+csccredir,40842,tcp,CSCCREDIR
+csccfirewall,40843,tcp,CSCCFIREWALL
+,40853,tcp,Reserved
+fs-qos,41111,tcp,Foursticks QoS Protocol
+tentacle,41121,tcp,Tentacle Server
+z-wave-s,41230,tcp,Z-Wave Protocol over SSL/TLS
+crestron-cip,41794,tcp,Crestron Control Port
+crestron-ctp,41795,tcp,Crestron Terminal Port
+crestron-cips,41796,tcp,Crestron Secure Control Port
+crestron-ctps,41797,tcp,Crestron Secure Terminal Port
+candp,42508,tcp,Computer Associates network discovery protocol
+candrp,42509,tcp,CA discovery response
+caerpc,42510,tcp,CA eTrust RPC
+recvr-rc,43000,tcp,Receiver Remote Control
+reachout,43188,tcp,REACHOUT
+ndm-agent-port,43189,tcp,NDM-AGENT-PORT
+ip-provision,43190,tcp,IP-PROVISION
+noit-transport,43191,tcp,Reconnoiter Agent Data Transport
+shaperai,43210,tcp,Shaper Automation Server Management
+eq3-update,43439,tcp,EQ3 firmware update
+ew-mgmt,43440,tcp,Cisco EnergyWise Management
+ciscocsdb,43441,tcp,Cisco NetMgmt DB Ports
+z-wave-tunnel,44123,tcp,Z-Wave Secure Tunnel
+pmcd,44321,tcp,PCP server (pmcd)
+pmcdproxy,44322,tcp,PCP server (pmcd) proxy
+pmwebapi,44323,tcp,HTTP binding for Performance Co-Pilot client API
+cognex-dataman,44444,tcp,Cognex DataMan Management Protocol
+,44544,tcp,Reserved
+rbr-debug,44553,tcp,REALbasic Remote Debug
+,44600,tcp,Reserved
+EtherNet-IP-2,44818,tcp,"EtherNet/IP messaging
+IANA assigned this well-formed service name as a replacement for ""EtherNet/IP-2""."
+EtherNet/IP-2,44818,tcp,EtherNet/IP messaging
+m3da,44900,tcp,M3DA is used for efficient machine-to-machine communications
+asmp,45000,tcp,NSi AutoStore Status Monitoring Protocol data transfer
+asmps,45001,tcp,NSi AutoStore Status Monitoring Protocol secure data transfer
+rs-status,45002,tcp,Redspeed Status Monitor
+synctest,45045,tcp,Remote application control protocol
+invision-ag,45054,tcp,InVision AG
+cloudcheck,45514,tcp,ASSIA CloudCheck WiFi Management System
+eba,45678,tcp,EBA PRISE
+dai-shell,45824,tcp,Server for the DAI family of client-server products
+qdb2service,45825,tcp,Qpuncture Data Access Service
+ssr-servermgr,45966,tcp,SSRServerMgr
+inedo,46336,tcp,Listen port used for Inedo agent communication
+spremotetablet,46998,tcp,Connection between a desktop computer or server and a signature tablet to capture handwritten signatures
+mediabox,46999,tcp,MediaBox Server
+mbus,47000,tcp,Message Bus
+winrm,47001,tcp,Windows Remote Management Service
+,47100,tcp,Reserved
+dbbrowse,47557,tcp,Databeam Corporation
+directplaysrvr,47624,tcp,Direct Play Server
+ap,47806,tcp,ALC Protocol
+bacnet,47808,tcp,Building Automation and Control Networks
+,47809,tcp,Reserved
+nimcontroller,48000,tcp,Nimbus Controller
+nimspooler,48001,tcp,Nimbus Spooler
+nimhub,48002,tcp,Nimbus Hub
+nimgtw,48003,tcp,Nimbus Gateway
+nimbusdb,48004,tcp,NimbusDB Connector
+nimbusdbctrl,48005,tcp,NimbusDB Control
+3gpp-cbsp,48049,tcp,3GPP Cell Broadcast Service Protocol
+weandsf,48050,tcp,WeFi Access Network Discovery and Selection Function
+isnetserv,48128,tcp,Image Systems Network Services
+blp5,48129,tcp,Bloomberg locator
+com-bardac-dw,48556,tcp,com-bardac-dw
+iqobject,48619,tcp,iqobject
+robotraconteur,48653,tcp,Robot Raconteur transport
+matahari,49000,tcp,Matahari Broker
